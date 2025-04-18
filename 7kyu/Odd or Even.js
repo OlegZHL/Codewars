@@ -37,7 +37,7 @@
 function oddOrEven(array) {
    let sum = 0;
    array.map(item => sum+=item)
-     let result = (sum%2)? "odd" : "even";
-   return result;
+     return  (sum%2)? "odd" : "even";
+
 }
-console.log(oddOrEven([0, 1, 4]));
+console.log(oddOrEven([0, 2, 4]));
