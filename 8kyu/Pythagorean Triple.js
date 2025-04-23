@@ -52,15 +52,8 @@
 
 
 function isPythagoreanTriple(integers) {
-    if (Math.pow(integers[0],2) + Math.pow(integers[1],2) === Math.pow(integers[2],2)){
-        return true;
-    } else if(Math.pow(integers[1],2) + Math.pow(integers[2],2) === Math.pow(integers[0],2)){
-        return true;
-    } else if(Math.pow(integers[2],2) + Math.pow(integers[0],2) === Math.pow(integers[1],2)){
-        return true;
-    } else{
-        return false;
-    }
+    let [a,b,c] = integers.sort((a,b) => a - b);
+     return (a*a + b*b) === c*c;
 }
 
 console.log(isPythagoreanTriple( [13, 12, 5]));
