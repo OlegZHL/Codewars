@@ -9,6 +9,7 @@
 // "Hi! Hi!" ---> "Hi Hi!"
 // "Hi"      ---> "Hi"
 
+
 function remove (string) {
     let arr = string.split('');
     let count = 0;
