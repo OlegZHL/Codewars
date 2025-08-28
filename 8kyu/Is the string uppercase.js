@@ -13,5 +13,8 @@
 // Таким образом, любая строка, не содержащая букв, по определению считается написанной ЗАГЛАВНЫМИ буквами.
 
 String.prototype.isUpperCase = function() {
-    // your code here
-}
+ return this.toString() === this.toUpperCase();
+};
+
+console.log("Hello".isUpperCase());
+console.log("HELLO".isUpperCase());
