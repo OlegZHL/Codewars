@@ -5,6 +5,9 @@
 // Примечание: используйте значение π, указанное для вашего языка (Math::PI, M_PI, math.pi и т. д.)
 
 function squareArea(A){
-
+ let dug = 4*A;
+ let R = dug/(Math.PI* 2);
+ return Number((R * R).toFixed(2));
 }
 
+console.log(squareArea(2));
