@@ -14,5 +14,14 @@
 // На выходе будет сокращённая строка, например "Friday May 2".
 
 function shortenToDate(longDate) {
-    // your code here
+    let arr = longDate.split("");
+    let count = 0;
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] === ','){
+            count+=i;
+        }
+    }
+    return (arr.slice(0, count)).join("");
 }
+
+console.log(shortenToDate("Tuesday January 29, 10pm"));
