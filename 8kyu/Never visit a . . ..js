@@ -125,30 +125,9 @@
 // 100-pineapple
 
 function subtractSum(n){
-   let num = whilesum(n);
-
-//    // if(num > 0 && num <= 0){
-//    //     return 11;
-//    // } else{
-//    //     return while
-//    // }
-// let  i = 0
-//     while (num > 100){
-//     num = num*0 + whilesum(num)
-//         i++
-//
-//     }
-    return num
-
+    return "apple";
 }
 
-function whilesum(n){
-    let sum = 0;
-    let str = String(n);
-    str.split('').map(item => sum += Number(item));
-    let final = n - sum;
-    return final;
-}
+console.log(subtractSum(1223));
 
-
-console.log(subtractSum(243));
+// если мы сделаем всё как надо, в любом случае получим число 99, а оно равно "apple".
