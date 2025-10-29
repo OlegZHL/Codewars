@@ -18,7 +18,25 @@
 // +5 Собачьи годы за каждый последующий год
 
 
-var humanYearsCatYearsDogYears = function(humanYears) {
-    // Your code here!
-    return [0,0,0];
+ function humanYearsCatYearsDogYears(humanYears){
+    let arr = [];
+    let cat = 0;
+    let dog = 0;
+        if(humanYears === 1){
+            cat+=15;
+            dog+=15;
+        } else if(humanYears === 2){
+            cat+=24;
+            dog+=24;
+        } else if(humanYears > 2){
+            cat = 24+(4*(humanYears-2));
+            dog = 24+(5*(humanYears-2));
+        }
+        arr[0] = humanYears;
+        arr[1] = cat;
+        arr[2] = dog;
+
+    return arr;
 }
+
+console.log(humanYearsCatYearsDogYears(10));
