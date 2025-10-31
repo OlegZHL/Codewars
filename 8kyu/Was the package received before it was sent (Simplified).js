@@ -26,6 +26,12 @@
 // Посылка получена в 22:00 по местному времени, за день до отправки.
 // Возвращается значение "True", так как посылка была получена за день до отправки.
 
-function was_package_received_yesterday(tz_from, tz_to, start, duration) {
-    return true ;
+function was_package_received_yesterday(tz_from, tz_to, start, duration){
+    let utcSend = start - tz_from;
+    let utcArrive = utcSend + duration;
+    let localArrive = utcArrive + tz_to;
+
+    return localArrive < 0;
 }
+
+console.log(was_package_received_yesterday(3,0,13,1));
