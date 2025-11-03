@@ -24,3 +24,5 @@
 function logicalCalc(array, op){
     //your code here
 }
+
+console.log(logicalCalc([true, true, true, false], "AND"));
