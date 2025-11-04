@@ -22,7 +22,17 @@
 // Логическое значение (True или False).
 
 function logicalCalc(array, op){
-    //your code here
+    let result = array[0];
+    for (let i = 1; i < array.length; i++){
+        if (op === "AND"){
+            result = result && array[i];
+        } else if (op === "OR"){
+            result = result || array[i];
+        } else if (op === "XOR"){
+            result = result !== array[i];
+        }
+    }
+    return result;
 }
 
 console.log(logicalCalc([true, true, true, false], "AND"));
