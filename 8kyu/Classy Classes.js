@@ -5,7 +5,18 @@
 // а также дополнить свойство get Info и метод getInfo/Info, которые должны возвращать johns age is 34.
 
 class Person {
-    constructor() {
-
+    constructor(name,age) {
+        this.name = name;
+        this.age = age;
+    }
+    get info(){
+        return this.getInfo();
+    }
+    getInfo() {
+        return `${this.name}s age is ${this.age}`;
     }
 }
+
+let john = new Person("john",34);
+
+console.log(john.info);
