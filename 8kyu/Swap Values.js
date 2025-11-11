@@ -3,9 +3,11 @@
 //
 // Можете ли вы понять, что здесь не так?
 
-function swapValues() {
-    var args = Array.prototype.slice.call(arguments);
-    var temp = args[0];
-    args[0] = args[1];
-    args[1] = temp;
+function swapValues(arr) {
+    const temp = arr[0];
+    arr[0] = arr[1];
+    arr[1] = temp;
+    return arr;
 }
+
+console.log(swapValues([1,2]));
