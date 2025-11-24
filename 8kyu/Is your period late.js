@@ -8,7 +8,10 @@
 // чем cycleLength. В противном случае верните false.
 
 function periodIsLate(last, today, cycleLength) {
-    return false;
+    const periodDay = 1000*60*60*24;
+    const day = today - last;
+    const mlDay = day/periodDay
+    return mlDay > cycleLength;
 }
 
-console.log(periodIsLate(2016, 6, 13));
+console.log(periodIsLate(new Date(2023, 0, 1), new Date(2023, 0, 31),28));
