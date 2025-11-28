@@ -3,8 +3,18 @@
 // Функция должна возвращать true, если функция обратного вызова / блок возвращает true для любого элемента в массиве,
 // в противном случае возвращается false.
 //
-// Если массив пуст, функция должна возвращать false
+// Если массив пуст, функция должна возвращать false.
 
 function any(arr, fun){
-    // ...
+    if(arr.length === 0){
+        return false;
+    }
+    for(let i = 0; i < arr.length; i++){
+        if(fun(arr[i])){
+            return true;
+        }
+    }
+    return false;
 }
+
+console.log(any([1,2,3,4],function(i){return i > 1}));
