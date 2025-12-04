@@ -30,5 +30,15 @@
 //     # 🥭🥭🆓   🥭🥭🆓   🥭🥭🆓
 
 function mango(quantity, price){
-
+    let totalPrice = 0;
+    for(let i = 1; i <= quantity; i++){
+        if( i%3 === 0){
+            totalPrice += 0;
+        }else{
+            totalPrice += price;
+        }
+    }
+    return totalPrice;
 }
+
+console.log(mango(3,3));
