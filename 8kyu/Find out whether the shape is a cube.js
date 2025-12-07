@@ -9,5 +9,11 @@
 
 
 function cubeChecker(volume, side){
-    return false;
+    if(volume <= 0 || side <= 0){
+        return false;
+    }
+    let sideResult = Math.sqrt(volume/side);
+       return Number.isInteger(sideResult);
 }
+
+console.log(cubeChecker(125,5));
