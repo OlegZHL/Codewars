@@ -11,12 +11,27 @@
 //
 // Вы можете считать, что пустых массивов/векторов не будет.
 
-var min = function(list){
-
-    return list[0];
+function min(list){
+    let min = list[0];
+    for(let i = 1; i < list.length; i++){
+        if(min > list[i]){
+            min = list[i];
+        }
+    }
+    return min;
 }
 
-var max = function(list){
+console.log(min([4,6,2,1,9,63,-134,566]));
 
-    return list[0];
+
+function max(list){
+    let max = list[0];
+    for(let i = 1; i < list.length; i++){
+        if(max < list[i]){
+            max = list[i];
+        }
+    }
+    return max;
 }
+
+console.log(max([4,6,2,1,9,63,-134,566]));
