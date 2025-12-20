@@ -9,6 +9,17 @@
 //     [-56,-85,72,-26,-14,76,-27,72,35,-21,-67,87,0,21,59,27,-92,68] => [-85, 72, 0, 68]
 
 
-function multipleOfIndex(array) {
-    // good luck
+function multipleOfIndex(array){
+    let arr = [];
+    if(array[0] === 0){
+        arr.push(array[0]);
+    }
+    for (let i = 0; i < array.length; i++){
+        if(array[i] % i === 0){
+            arr.push(array[i]);
+        }
+    }
+    return arr;
 }
+
+console.log(multipleOfIndex([22, -6, 32, 82, 9, 25]));
