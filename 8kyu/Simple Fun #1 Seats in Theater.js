@@ -45,5 +45,9 @@
 
 
 function seatsInTheater(nCols, nRows, col, row) {
-    //coding and coding..
+    let rowPlace = nRows - row;
+    let colPlace = (nCols - col)+1;
+    return rowPlace * colPlace;
 }
+
+console.log(seatsInTheater(16,11,5,3));
