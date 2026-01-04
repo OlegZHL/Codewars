@@ -4,5 +4,7 @@
 // Предположим, что углы, образованные отрезками AB и BC, являются прямыми.
 
 function polygonArea(A,B,C,D){
-
+ return (C*B) - 2*(0.5*(C-A)*D);
 }
+
+console.log(polygonArea(2,4,4,2));
