@@ -9,5 +9,17 @@
 // В случае, если на доставку всех подарков потребуется ровно 24 часа, Санта сможет завершить доставку ;-) .
 
 function determineTime (durations) {
-    //have fun with coding ^.^
+    let generalTime = 0;
+    for (let i = 0; i < durations.length; i++){
+           let time = durations[i].split(":");
+
+           let hours = parseInt(time[0])*60*60;
+           let minutes = parseInt(time[1])*60;
+           let seconds = parseInt(time[2]);
+           let time1 = hours + minutes + seconds;
+           generalTime += time1;
+    }
+    return (generalTime <= 86400);
 }
+
+console.log(determineTime(["04:30:00", "02:00:00", "01:30:00", "16:00:00"]));
