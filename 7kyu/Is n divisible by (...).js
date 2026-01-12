@@ -8,6 +8,14 @@
 // (100,5,4,10,25,20)--> true
 // (12,7)--> false because 12 is not divisible by 7
 
-function isDivisible(){
-    //Write your code here
+function isDivisible(...array){
+
+    let number = array[0];
+    let count = 0;
+    for (let i = 0; i < array.length; i++) {
+        (number % array[i] === 0)?count++:count--;
+    }
+    return count === array.length;
 }
+
+console.log(isDivisible(6,2,3));
