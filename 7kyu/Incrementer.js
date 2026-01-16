@@ -13,6 +13,18 @@
 //
 //     [4, 6, 9, 1, 3]  -->  [5, 8, 2, 5, 8]  #  [4+1, 6+2, 9+3, 1+4, 3+5]
 
-function incrementer(nums) {
-    // code goes here
+function incrementer(nums){
+    let arr = [];
+    if(nums.length === 0){
+        return arr;
+    }else{
+        for(let i = 0; i < nums.length; i++){
+            let num = String(parseInt(nums[i])+(i+1));
+            (num.length > 1)?arr.push(parseInt(num.split('').reverse().splice(0,1).join(''))):
+            arr.push(parseInt(num));
+        }
+        return arr;
+    }
 }
+
+console.log(incrementer([3, 6, 9, 8, 9]));
