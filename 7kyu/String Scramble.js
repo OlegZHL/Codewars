@@ -19,5 +19,11 @@
 // массив будет содержать допустимые индексы.
 
 function scramble(str, arr) {
-    return str;
+    let str1 = [];
+    for(let i = 0; i < arr.length; i++) {
+            str1[arr[i]] = str[i];
+    }
+    return str1.join("");
 }
+
+console.log(scramble("abcd",[0,3,1,2]));
