@@ -10,5 +10,14 @@
 // Другие примеры в тестовых заданиях. Удачи!
 
 function solve(st, a, b){
-    //..
+    (b > st.length)? b=st.length: b+=1;
+
+    let arr = st.split("");
+    let sliceArr = arr.slice(a,b).reverse();
+    for (let i = 0; i < sliceArr.length ; i++) {
+        arr[i+a] = sliceArr[i];
+    }
+    return arr.join("");
 }
+
+console.log(solve("codewars",1,5));
