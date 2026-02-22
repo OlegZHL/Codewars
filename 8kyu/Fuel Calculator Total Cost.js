@@ -7,7 +7,22 @@
 // отрицательными или нечисловыми.
 //     Удачи!
 
-function fuelPrice(litres, pricePerLitre) {
-    // your code here
-    // Good luck with it!
+function fuelPrice(litres, pricePerLitre){
+    let result;
+    if(litres === 0 || litres === 1){
+         result = pricePerLitre*litres;
+    } else if(litres === 2 || litres === 3){
+         result = pricePerLitre*litres - (litres*0.05);
+    } else if(litres === 4 || litres === 5){
+         result = pricePerLitre*litres - (litres*0.1);
+    } else if(litres === 6 || litres === 7){
+         result = pricePerLitre*litres - (litres*0.15);
+    } else if(litres === 8 || litres === 9){
+         result = pricePerLitre*litres - (litres*0.2);
+    } else {
+         result = pricePerLitre*litres - (litres*0.25);
+    }
+    return +(result.toFixed(2));
 }
+
+console.log(fuelPrice(8, 2.5));
