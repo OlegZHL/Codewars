@@ -10,7 +10,6 @@
 //
 // Можно предположить, что входные данные всегда будут представлять собой целые числа от 0 до 2.
 
-
 function elevator(left, right, call){
     if(right === left || right === call){
         return "right";
