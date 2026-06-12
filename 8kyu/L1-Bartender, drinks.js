@@ -18,6 +18,7 @@
 // с неправильным написанием заглавных букв. Например, при вводе "pOLitiCIaN" должно получиться
 // "Your tax dollars".
 
+
 function getDrinkByProfession(param){
     if(param.toLowerCase() === "jabroni"){
         return "Patron Tequila";
